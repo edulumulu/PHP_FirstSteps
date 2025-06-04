@@ -1,0 +1,8 @@
+
+
+Resultados (2025-06-04 13:26:03)
+Summa de 4 + 2 = 6
+Resta de 4 - 2 = 2
+Producto de 4 * 2 = 8
+Division de 4 + 2 = 2
+

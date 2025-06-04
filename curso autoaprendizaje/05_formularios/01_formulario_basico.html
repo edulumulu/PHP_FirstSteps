@@ -1,3 +1,30 @@
-<?php
-// Archivo: 01_formulario_basico.html
-// Tema: 05 Formularios
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Datos de registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/estilos.css">
+    </head>
+    <body>
+        <h1> Insertar Empleado </h1>
+        
+        <form action="03_login_simple.php" method="POST">
+            <!--<p>Id <input type="text" name="id_empleado"></p>-->
+            <p>Usuario <input type="text" name="user"></p>
+            <p>Contraseña <input type="text" name="pass"></p>
+            <p>Nombre completo <input type="text" name="nombre"></p>
+            <p>Edad <input type="text" name="age"></p>
+
+            <input type="submit" value="insertar">
+        </form>
+        <!--<form action="index.html" method="POST">
+            <input type="submit" value="Volver">
+        </form>-->
+    </body>
+</html>

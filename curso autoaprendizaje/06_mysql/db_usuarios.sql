@@ -1,3 +1,8 @@
-<?php
-// Archivo: db_usuarios.sql
-// Tema: 06 Mysql
+CREATE DATABASE IF NOT EXISTS usuarios;
+
+USE usuarios;
+
+CREATE TABLE IF NOT EXISTS usuario (
+    name VARCHAR (50) NOT NULL;
+    age INT NOT NULL;
+)
