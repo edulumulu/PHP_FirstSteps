@@ -1,0 +1,147 @@
+🟢 Nivel 1 – Variables y estructuras básicas
+1. Suma de dos números
+Crea dos variables con números y muestra su suma.
+
+2. Número par o impar
+Pide un número (asignado manualmente) y muestra si es par o impar.
+
+3. Día de la semana
+Crea una variable con un número del 1 al 7 y usa if o switch para mostrar qué día de la semana es.
+
+
+
+🟡 Nivel 2 – Bucles y arrays
+4. Lista de nombres con foreach
+Crea un array de nombres y muestra cada uno en una línea.
+
+5. Tabla de multiplicar con for
+Muestra la tabla de multiplicar del 5 usando un bucle for.
+
+6. Contador con while
+Muestra los números del 10 al 1 usando un bucle while.
+
+
+
+
+🔵 Nivel 3 – Funciones y lógica
+7. Función que diga si un número es primo
+Crea una función esPrimo($numero) que devuelva true o false.
+
+8. Función que calcule el factorial
+Crea una función que calcule el factorial de un número.
+
+9. Contar vocales en una cadena
+Crea una función que reciba un string y cuente cuántas vocales contiene.
+
+
+
+🟣 Nivel 4 – Clases
+10. Clase Persona
+Crea una clase Persona con nombre, edad y una función que diga si es mayor de edad.
+
+php
+Copiar
+Editar
+$persona = new Persona("Ana", 22);
+$persona->esMayorDeEdad(); // Devuelve true o false
+11. Clase Coche
+Crea una clase Coche con atributos marca, modelo y velocidad. Añade métodos acelerar() y frenar() que modifiquen la velocidad.
+
+⚡ Bonus – Mini proyectos
+12. Calculadora
+Haz una función que reciba dos números y una operación (+, -, *, /) y devuelva el resultado.
+
+13. Lista de tareas
+Usa un array de tareas (strings) y crea una función que muestre todas las tareas pendientes.
+
+
+🟣 Nivel 5 – Lógica estructuras
+
+🔁 1. Ampliar lógica y estructuras
+✅ Arrays asociativos y multidimensionales
+
+✅ Funciones con arrays (array_map, array_filter, array_reduce)
+
+✅ Operadores ternarios, null coalescing (??)
+
+✅ Desestructuración de arrays (PHP 7+)
+
+🧪 Ejercicios:
+
+Crea un array de personas con nombre, edad y ciudad, y filtra solo los mayores de edad.
+
+Suma todos los precios de un carrito de compras usando array_reduce.
+
+🧱 2. Programación orientada a objetos (POO) avanzada
+✅ Propiedades y métodos private y protected
+
+✅ Métodos mágicos (__construct, __get, __set, __toString)
+
+✅ Herencia y clases abstractas
+
+✅ Interfaces
+
+✅ Namespaces y autoload (PSR-4 con Composer)
+
+🧪 Ejercicios:
+
+Crea una clase Animal y una clase Perro que hereda de ella.
+
+Usa __toString() para mostrar información del objeto como string.
+
+Crea una interfaz Transportable que requiera un método transportar().
+
+🗃️ 3. Trabajar con ficheros
+✅ Leer (fopen, fgets, file_get_contents)
+
+✅ Escribir (fwrite, file_put_contents)
+
+✅ Crear logs, leer configuraciones, guardar resultados
+
+🧪 Ejercicio:
+
+Guarda los resultados de operaciones matemáticas en un fichero resultados.txt.
+
+🌐 4. Formularios y entrada de datos desde HTML
+✅ Procesar $_GET, $_POST, $_REQUEST
+
+✅ Validación y sanitización (filter_input)
+
+✅ Formularios con method="post" y action="tu_php.php"
+
+🧪 Ejercicio:
+
+Crea un formulario que reciba nombre y edad, y que devuelva un mensaje personalizado.
+
+🗄️ 5. Bases de datos con MySQL (XAMPP o MAMP)
+✅ Conexión con PDO (new PDO(...))
+
+✅ Consultas seguras con prepare() y execute()
+
+✅ CRUD completo (Create, Read, Update, Delete)
+
+🧪 Proyecto:
+
+Haz una agenda de contactos en PHP + MySQL.
+
+🧰 6. Composer y dependencias
+✅ Aprende a usar composer init y composer require
+
+✅ Usa librerías como:
+
+vlucas/phpdotenv para variables de entorno
+
+fakerphp/faker para generar datos falsos
+
+phpmailer/phpmailer para enviar correos
+
+💡 7. Proyecto práctico para afianzar todo
+Crea un mini blog en PHP:
+
+Usuarios pueden escribir, ver y eliminar entradas
+
+Datos guardados en base de datos
+
+Formularios HTML
+
+Estilos con CSS básico

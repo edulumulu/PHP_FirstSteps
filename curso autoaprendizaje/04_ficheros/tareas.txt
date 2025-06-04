@@ -1,0 +1,3 @@
+<?php
+// Archivo: tareas.txt
+// Tema: 04 Ficheros

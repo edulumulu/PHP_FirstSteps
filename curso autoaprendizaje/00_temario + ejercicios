@@ -1,0 +1,118 @@
+📚 RUTA COMPLETA DE APRENDIZAJE EN PHP (NIVEL INTERMEDIO)
+🔁 1. Arrays avanzados y funciones útiles
+🔹 Temas:
+Arrays asociativos y multidimensionales
+
+Funciones clave: array_map, array_filter, array_reduce, in_array, array_key_exists
+
+Desestructuración ([$a, $b] = $array;)
+
+✅ Ejercicios:
+Crea una lista de alumnos con nombre y nota. Filtra los aprobados.
+
+Calcula la media de un array de notas usando array_reduce.
+
+Busca si un elemento existe con in_array.
+
+👨‍💻 2. POO avanzada en PHP
+🔹 Temas:
+private, protected, public
+
+Métodos mágicos (__construct, __get, __set, __toString)
+
+Herencia (extends)
+
+Clases abstractas e interfaces
+
+Autoload con spl_autoload_register
+
+✅ Ejercicios:
+Crea una clase Empleado con nombre, salario y métodos get/set.
+
+Crea una clase Gerente que hereda de Empleado.
+
+Usa __toString() para mostrar un resumen del objeto.
+
+🗃️ 3. Ficheros (Lectura y Escritura)
+🔹 Temas:
+fopen, fgets, fwrite, fclose
+
+file_get_contents, file_put_contents
+
+✅ Ejercicios:
+Guarda un registro de actividad en un fichero .txt.
+
+Lee una lista de tareas desde un fichero y muéstralas en pantalla.
+
+Escribe un pequeño log de acciones con timestamp.
+
+🌐 4. Formularios y entrada de datos (HTML + PHP)
+🔹 Temas:
+$_POST, $_GET, $_REQUEST
+
+Validación y sanitización (filter_var)
+
+Enviar y procesar formularios
+
+✅ Ejercicios:
+Crea un formulario con nombre y edad. Muestra un mensaje de bienvenida.
+
+Valida un email desde formulario y muéstralo si es válido.
+
+Crea un formulario de login simple (usuario/contraseña fijos en PHP).
+
+🗄️ 5. Conexión con Base de Datos (MySQL con XAMPP)
+🔹 Temas:
+Conexión con PDO (new PDO(...))
+
+Consultas preparadas (prepare(), bindParam, execute)
+
+CRUD básico (Create, Read, Update, Delete)
+
+✅ Ejercicios:
+Crea una tabla usuarios con nombre y edad.
+
+Inserta datos desde un formulario en HTML.
+
+Muestra una tabla con todos los usuarios registrados.
+
+Crea funciones para editar y eliminar usuarios.
+
+🧰 6. Uso de Composer y librerías externas
+🔹 Temas:
+composer init, composer require
+
+Uso de .env con vlucas/phpdotenv
+
+Uso de fakerphp/faker para generar datos
+
+Uso de phpmailer/phpmailer para enviar correos
+
+✅ Ejercicios:
+Instala Faker y genera 10 usuarios falsos con nombre y email.
+
+Envía un correo de prueba con PHPMailer.
+
+Crea un archivo .env con credenciales y léelo desde PHP.
+
+📝 7. Proyecto final: Mini blog en PHP
+🔹 Funcionalidades:
+Registro y listado de entradas
+
+CRUD de entradas de blog (sin framework)
+
+Estilos básicos con CSS
+
+Guardado en MySQL
+
+Protección básica contra inyecciones
+
+📦 ¿Material de apoyo?
+📁 ¿Quieres que te prepare un paquete con?
+Código base por secciones
+
+Archivos .php y .html
+
+Base de datos .sql para probar
+
+Instrucciones paso a paso
