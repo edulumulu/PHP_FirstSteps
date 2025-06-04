@@ -1,3 +1,6 @@
+------------ EJERCICIOS INICIALES --------------
+
+
 🟢 Nivel 1 – Variables y estructuras básicas
 1. Suma de dos números
 Crea dos variables con números y muestra su suma.
@@ -54,6 +57,8 @@ Haz una función que reciba dos números y una operación (+, -, *, /) y devuelv
 13. Lista de tareas
 Usa un array de tareas (strings) y crea una función que muestre todas las tareas pendientes.
 
+
+------------ EJERCICIOS INTERMEDIOS --------------
 
 🟣 Nivel 5 – Lógica estructuras
 
