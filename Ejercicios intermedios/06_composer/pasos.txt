@@ -1,0 +1,150 @@
+📦 Proyecto: “Gestor de Usuarios con Email de Confirmación y Datos de Prueba”
+🔧 Funcionalidades
+Leer datos de conexión desde .env.
+
+Insertar usuarios con datos reales o falsos usando Faker.
+
+Enviar un email de confirmación con PHPMailer.
+
+Usar Composer para gestionar todo.
+
+🛠️ PASO A PASO
+1. 🧱 Estructura del proyecto
+plaintext
+Copiar
+Editar
+mi_proyecto_php/
+│
+├── .env
+├── composer.json
+├── 01_conexion.php
+├── 02_insertar_usuario.php
+├── 03_generar_datos_falsos.php
+├── 04_enviar_correo.php
+├── vendor/ (generado por composer)
+└── index.php
+2. ⚙️ Iniciar Composer
+En la terminal:
+
+bash
+Copiar
+Editar
+composer init
+Responde las preguntas (nombre, descripción, etc.) o pulsa enter. Luego instala las dependencias:
+
+bash
+Copiar
+Editar
+composer require vlucas/phpdotenv fakerphp/faker phpmailer/phpmailer
+3. 📄 .env (en la raíz del proyecto)
+dotenv
+Copiar
+Editar
+DB_HOST=127.0.0.1
+DB_PORT=3308
+DB_NAME=usuarios
+DB_USER=root
+DB_PASS=
+
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USER=tu_correo@gmail.com
+MAIL_PASS=tu_contraseña
+MAIL_FROM=tu_correo@gmail.com
+MAIL_FROM_NAME=Gestor de Usuarios
+4. 🔗 01_conexion.php
+php
+Copiar
+Editar
+<?php
+require_once "vendor/autoload.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$host = $_ENV['DB_HOST'];
+$port = $_ENV['DB_PORT'];
+$db = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USER'];
+$pass = $_ENV['DB_PASS'];
+
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
+
+try {
+    $pdo = new PDO($dsn, $user, $pass);
+} catch (PDOException $e) {
+    die("Error de conexión: " . $e->getMessage());
+}
+5. 👤 02_insertar_usuario.php
+php
+Copiar
+Editar
+<?php
+require "01_conexion.php";
+
+$name = "Usuario Real";
+$age = 30;
+
+$stm = $pdo->prepare("INSERT INTO usuario (name_, age) VALUES (?, ?)");
+$stm->execute([$name, $age]);
+
+echo "Usuario insertado correctamente.";
+6. 🤖 03_generar_datos_falsos.php
+php
+Copiar
+Editar
+<?php
+require "01_conexion.php";
+
+$faker = Faker\Factory::create();
+
+for ($i = 0; $i < 10; $i++) {
+    $name = $faker->name();
+    $age = rand(18, 60);
+    $stm = $pdo->prepare("INSERT INTO usuario (name_, age) VALUES (?, ?)");
+    $stm->execute([$name, $age]);
+    echo "Insertado: $name, $age\n";
+}
+7. 📬 04_enviar_correo.php
+php
+Copiar
+Editar
+<?php
+require_once "vendor/autoload.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$mail = new PHPMailer(true);
+
+try {
+    $mail->isSMTP();
+    $mail->Host = $_ENV['MAIL_HOST'];
+    $mail->SMTPAuth = true;
+    $mail->Username = $_ENV['MAIL_USER'];
+    $mail->Password = $_ENV['MAIL_PASS'];
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = $_ENV['MAIL_PORT'];
+
+    $mail->setFrom($_ENV['MAIL_FROM'], $_ENV['MAIL_FROM_NAME']);
+    $mail->addAddress('destinatario@correo.com');
+
+    $mail->Subject = 'Usuario registrado';
+    $mail->Body = 'Se ha registrado un nuevo usuario en la base de datos.';
+
+    $mail->send();
+    echo "Correo enviado correctamente.";
+} catch (Exception $e) {
+    echo "Error al enviar el correo: {$mail->ErrorInfo}";
+}
+8. 🚀 index.php (prueba completa)
+php
+Copiar
+Editar
+<?php
+require "02_insertar_usuario.php";
+require "04_enviar_correo.php";
+¿Quieres que prepare un ZIP con esta estructura o prefieres que prepare un repositorio base en GitHub para que lo descargues o lo clones? También te puedo guiar paso a paso mientras lo creas tú.
